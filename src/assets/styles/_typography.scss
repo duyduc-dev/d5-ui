@@ -1,0 +1,59 @@
+@import 'mixins';
+
+$font-family: 'Satoshi Variable';
+
+$font-size-xs: 1rem;
+$font-size-smd: 1.2rem;
+$font-size-md: 1.3rem;
+$font-size-lg: 1.6rem;
+$font-size-extra-lg: 2.8rem;
+
+$font-weight-thin: 400;
+$font-weight-regular: 480;
+$font-weight-medium: 580;
+$font-weight-bold: 800;
+
+@mixin text-custom($fs: $font-size-md, $fw: $font-weight-thin, $lh: 1.8rem, $important: false) {
+  font-size: $fs is-important($important);
+  font-weight: $fw is-important($important);
+  line-height: $lh is-important($important);
+}
+
+@mixin text-xs-medium($important: false) {
+  @include text-custom($font-size-xs, $font-weight-medium, 1.2rem, $important);
+}
+
+@mixin text-smd-regular($important: false) {
+  @include text-custom($font-size-smd, $font-weight-regular, 1.8rem, $important);
+}
+@mixin text-smd-medium($important: false) {
+  @include text-custom($font-size-smd, $font-weight-medium, 1.8rem, $important);
+}
+
+@mixin text-md-thin {
+  @include text-custom($font-size-md, $font-weight-thin, 1.8rem);
+}
+
+@mixin text-md-regular($important: false) {
+  @include text-custom($font-size-md, $font-weight-regular, 1.8rem, $important);
+}
+
+@mixin text-md-medium($important: false) {
+  @include text-custom($font-size-md, $font-weight-medium, 1.8rem, $important);
+}
+
+@mixin text-md-bold($important: false) {
+  @include text-custom($font-size-md, $font-weight-bold, 1.8rem, $important);
+}
+
+@mixin text-lg-regular($important: false) {
+  @include text-custom($font-size-lg, $font-weight-regular, 2rem, $important);
+}
+
+@mixin text-lg-medium($important: false) {
+  @include text-custom($font-size-lg, $font-weight-medium, 2rem, $important);
+}
+
+@mixin text-extraLg-medium($important: false) {
+  @include text-custom($font-size-extra-lg, $font-weight-medium, 3.2rem, $important);
+}

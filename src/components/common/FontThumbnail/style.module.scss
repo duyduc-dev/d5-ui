@@ -1,0 +1,42 @@
+@import '@assets/styles/common';
+
+.container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  border-radius: $spacing-1;
+  padding: $spacing-2;
+  padding-top: $spacing-4;
+  border: 1px solid $color-transparent;
+
+  &:hover {
+    border-color: $neutrals-grey-7;
+
+    .textStyle {
+      background-color: $neutrals-grey-9;
+    }
+  }
+
+  .textStyle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 7.2rem;
+    width: 15rem;
+    height: 15rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $spacing-1;
+
+    @include translate-leaner;
+  }
+
+  .title {
+    width: 100%;
+    @include text-md-regular;
+    @include paddingY($spacing-2);
+  }
+}

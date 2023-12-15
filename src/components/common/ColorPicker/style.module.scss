@@ -1,0 +1,63 @@
+@import '@assets/styles/common';
+
+.container {
+  z-index: 99999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .inner {
+    background-color: #fff;
+    border-radius: $spacing-1;
+    padding: $spacing-4 $spacing-8;
+
+    .titleCreateNewColor {
+      @include text-lg-medium;
+      margin-top: $spacing-3;
+      margin-bottom: $spacing-5;
+    }
+
+    .bodyColorPicker {
+      display: flex;
+      gap: $spacing-4;
+    }
+
+    .hexSection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $spacing-2;
+
+      > p {
+        flex: 1;
+      }
+
+      .inputHex {
+        font-family: $font-family;
+        @include text-md-medium;
+        @include paddingX($spacing-2);
+        width: 50%;
+        flex: 1;
+        background-color: $neutrals-grey-7;
+        outline: none;
+        border: none;
+        border-radius: $spacing-2;
+        height: $spacing-8;
+      }
+    }
+
+    .rgbSection {
+      .sliderContainer {
+        @include paddingX($spacing-2);
+      }
+    }
+
+    .footer {
+      margin-top: $spacing-4;
+      display: flex;
+      gap: $spacing-2;
+      justify-content: flex-end;
+    }
+  }
+}

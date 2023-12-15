@@ -1,0 +1,123 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    // "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:json/recommended"
+  ],
+  "plugins": ["prettier", "simple-import-sort"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["<current-directory-path>"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".woff2", ".scss"]
+      }
+    }
+  },
+  "globals": {
+    "Promise": true,
+    "Set": true,
+    "esprima": true
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "amd": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "requireConfig": false,
+    "requireConfigFile": false,
+    "sourceType": "module",
+    "ecmaVersion": 2022,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-use-before-define": "off",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/named": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-target-blank": "warn",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "off",
+    "no-case-declarations": "off",
+    "no-useless-escape": "off",
+    "react/no-children-prop": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^(@|components)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.?(scss)$"]
+        ]
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^@", "^~"]
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "arrowParens": "always",
+        "semi": true,
+        "endOfLine": "auto",
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "printWidth": 120,
+        "jsxSingleQuote": false,
+        "singleAttributePerLine": false,
+        "noImplicitAny": false
+      },
+      {
+        "usePrettierrc": true
+      }
+    ],
+    // "@typescript-eslint/no-explicit-any": "off",
+    // "@typescript-eslint/no-empty-function": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "endOfLine": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "consistent": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+@import '@assets/styles/common';
+
+.container {
+  margin-top: $spacing-10;
+
+  .headContainer {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+  }
+
+  .title {
+    @include text-md-medium;
+  }
+
+  .buttonLink {
+    @include paddingY(0 !important);
+  }
+
+  .carouselContainer {
+    margin-top: $spacing-4;
+  }
+}

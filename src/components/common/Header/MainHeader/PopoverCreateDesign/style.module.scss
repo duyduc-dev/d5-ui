@@ -1,0 +1,49 @@
+@import '@assets/styles/common';
+
+.containerPopover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  padding: $spacing-2;
+  width: 35rem;
+}
+
+.inputSearch {
+  height: $spacing-10 !important;
+  width: 100%;
+
+  input {
+    font-size: 1.5rem !important;
+  }
+}
+
+.suggested {
+  @include paddingY($spacing-2);
+  @include paddingX($spacing-1);
+  @include text-smd-medium;
+
+  color: $neutrals-grey-5;
+  text-align: left;
+  width: 100%;
+}
+
+.containerListOption {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.itemOption {
+  @include text-md-medium(true);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  padding-left: $spacing-4;
+  padding-right: $spacing-4;
+  width: 100%;
+  flex: 1;
+  color: $neutrals-grey-4 !important;
+  cursor: pointer;
+  gap: $spacing-2;
+}

@@ -1,0 +1,26 @@
+@import '@assets/styles/common';
+
+.container {
+}
+
+.title {
+  @include text-md-medium;
+}
+
+.carouselContainer {
+  margin-top: $spacing-4;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+
+  .buttonLink {
+    @include paddingY(0 !important);
+  }
+}
+
+.carouselItem {
+  height: 100%;
+}

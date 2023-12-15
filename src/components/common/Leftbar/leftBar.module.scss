@@ -1,0 +1,60 @@
+@import '@assets/styles/common';
+
+.container {
+  transition: all 0.1s ease;
+  width: $width-leftBar;
+  max-width: $width-leftBar;
+  min-width: $width-leftBar;
+  max-height: 100vh;
+  overflow: hidden;
+  border-right: 1px solid $neutrals-grey-7;
+  background-color: $neutrals-grey-9;
+  padding-top: $spacing-4;
+  padding-bottom: $spacing-4;
+
+  &.hidden {
+    transition: all 0.1s ease;
+    display: none;
+  }
+
+  .containerTreeFolder {
+    @include scrollbar-vertical-auto;
+
+    padding-left: $spacing-4;
+    padding-right: $spacing-4;
+    max-height: 80%;
+
+    &::-webkit-scrollbar {
+      width: 4px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d4d4d4;
+    }
+  }
+}
+
+.containerTeam {
+  margin-top: $spacing-2;
+  margin-bottom: $spacing-5 !important;
+  margin-left: $spacing-4;
+  margin-right: $spacing-4;
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+  justify-content: start !important;
+
+  .textContainer {
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+  }
+
+  .teamCount {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+    color: $neutrals-grey-4;
+    font-size: $font-size-smd;
+    margin-top: $spacing-1;
+  }
+}

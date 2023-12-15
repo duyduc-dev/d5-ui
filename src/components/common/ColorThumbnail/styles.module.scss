@@ -1,0 +1,72 @@
+@import '@assets/styles/common';
+
+.container {
+  @include translate-leaner;
+
+  cursor: pointer;
+  border-radius: $spacing-1;
+  width: 18rem;
+  min-height: 18rem;
+  padding: $spacing-3;
+
+  display: flex;
+  justify-content: center;
+  border: 1px solid $color-transparent;
+
+  &:hover {
+    border-color: $neutrals-grey-7;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapColor {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .color {
+    width: 80%;
+    height: 80%;
+    border-radius: $spacing-1;
+  }
+
+  .colorName {
+    @include text-md-medium;
+    width: 100%;
+    margin-top: $spacing-2;
+  }
+
+  .separator {
+    width: 100%;
+    @include marginY($spacing-2);
+  }
+
+  .colorInfo {
+    & + .colorInfo {
+      margin-top: $spacing-2;
+    }
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: $neutrals-grey-3;
+    @include text-smd-regular;
+
+    .typeCOlor {
+      background-color: $neutrals-grey-7;
+      padding: $spacing $spacing-2;
+      border-radius: $spacing-2;
+      @include text-smd-regular;
+    }
+  }
+}

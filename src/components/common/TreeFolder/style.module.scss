@@ -1,0 +1,54 @@
+@import '@assets/styles/common';
+
+.treeItemSelected {
+  background-color: red !important;
+}
+
+.treeLabelContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  flex: 1;
+
+  .inner {
+    flex: 1 !important;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    width: 100%;
+    color: $neutrals-grey-4;
+  }
+
+  .treeLabelTitle {
+    transition: all 0.1s ease;
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+  }
+
+  .treeLabelTitleActive {
+    color: $neutrals-grey-1;
+  }
+
+  .iconDirection {
+    margin-right: $spacing-2;
+    transform: rotate(-90deg);
+    transition: all 0.1s ease;
+  }
+
+  .iconOpening {
+    transform: rotate(0);
+  }
+}
+
+.divider {
+  height: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+
+  hr {
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+@import '@assets/styles/style.scss';
+
+.container {
+  position: fixed;
+  bottom: var(--spacing-8);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.8s ease;
+  z-index: 99999999999;
+
+  .innerContainer {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    min-width: 172px;
+    height: 41px;
+    border-radius: var(--spacing-2);
+    padding: $spacing-4 $spacing-8;
+    gap: $spacing-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  .content {
+    color: $neutrals-grey-5;
+    font-style: normal;
+    font-size: $font-size-md;
+    white-space: nowrap;
+    z-index: 10;
+  }
+}
+
+.hidden {
+  bottom: -200%;
+}

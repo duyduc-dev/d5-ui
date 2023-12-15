@@ -1,0 +1,71 @@
+@import '@assets/styles/common';
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+.logoObollo {
+  text-align: center;
+  font-size: 4.2rem;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: $spacing-10;
+}
+
+.signIn {
+  @include text-extraLg-medium;
+  text-align: center;
+  padding-top: $spacing-10;
+}
+
+.signInWithGoogle {
+  @include text-md-medium(true);
+
+  margin-top: $spacing-10 !important;
+  background-color: $color-blueViolet !important;
+  width: 100% !important;
+  height: 48px !important;
+}
+
+.divide {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: $spacing-8;
+  hr {
+    flex: 1;
+  }
+
+  .orSignInWithEmail {
+    @include text-custom($font-size-smd, $font-weight-medium, 16px);
+    @include paddingX($spacing-2);
+    color: $neutrals-grey-5;
+    text-align: center;
+  }
+}
+
+.formLogin {
+  margin-top: $spacing-4;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+
+  .btnSignIn {
+    @include text-md-medium;
+    height: $spacing-12;
+  }
+}
+
+.donNotAccount {
+  color: $neutrals-grey-5;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $spacing-3;
+
+  a {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    color: $neutrals-grey-3 !important;
+  }
+}

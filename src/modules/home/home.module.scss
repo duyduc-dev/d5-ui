@@ -1,0 +1,21 @@
+@import '@assets/styles/common';
+
+.designContainer {
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    .viewMore {
+      @include paddingY(0.1rem);
+    }
+  }
+
+  .bodyContainer {
+    width: 100%;
+    margin-top: $spacing-5;
+  }
+}
+
+.titleContainer {
+  @include text-lg-medium;
+}

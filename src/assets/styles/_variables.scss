@@ -1,0 +1,18 @@
+@import 'typography';
+@import 'spacing';
+
+:root {
+  --font-family: 'Satoshi Variable';
+  --font-weight-medium: 580;
+
+  --spacing: 0.2rem;
+  --spacing-1: 0.4rem;
+  --spacing-2: 0.8rem;
+  --spacing-3: 1.2rem;
+  --spacing-4: 1.6rem;
+  --spacing-8: 3.2rem;
+
+  --spacing-14px: 1.4rem;
+
+  // --font-weight-medium: 580;
+}

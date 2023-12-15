@@ -1,0 +1,36 @@
+@import '@assets/styles/common';
+
+.modalCreateFolderContainer {
+  z-index: 99999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .inner {
+    @include boxShadowXs;
+    padding: $spacing-4;
+    border-radius: $spacing-1;
+    background-color: $color-white;
+    width: 35rem;
+    .newFolder {
+      @include text-lg-medium;
+    }
+
+    .inputNameFolder {
+      @include marginY($spacing-3 !important);
+    }
+
+    .btnGroup {
+      margin-top: $spacing-2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: $spacing-2;
+
+      button {
+        height: 4rem;
+      }
+    }
+  }
+}

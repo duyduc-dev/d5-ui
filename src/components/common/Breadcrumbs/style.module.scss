@@ -1,0 +1,11 @@
+@import '@assets/styles/common';
+
+.link {
+  @include text-md-medium;
+  font-family: $font-family;
+  text-decoration: none;
+  color: $neutrals-grey-5;
+  &.active {
+    color: $neutrals-grey-1;
+  }
+}

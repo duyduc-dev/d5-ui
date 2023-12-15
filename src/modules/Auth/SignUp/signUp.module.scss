@@ -1,0 +1,47 @@
+@import '@assets/styles/common';
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+.signUp {
+  @include text-extraLg-medium;
+  text-align: center;
+  padding-top: $spacing-10;
+  margin-bottom: $spacing-12;
+}
+
+.logo {
+  text-align: center;
+  font-size: 4.2rem;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: $spacing-10;
+}
+
+.wrapForm {
+  .wrapInput {
+    & + .wrapInput {
+      margin-top: $spacing-3;
+    }
+  }
+
+  .btnSignUp {
+    border-radius: $spacing-2;
+    font-size: 1.3rem;
+    margin-top: $spacing-3;
+  }
+}
+
+.doYouHaveAccount {
+  color: $neutrals-grey-5;
+  text-align: center;
+  margin-top: $spacing-3;
+
+  a {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    color: $neutrals-grey-3 !important;
+  }
+}

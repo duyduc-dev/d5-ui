@@ -1,0 +1,46 @@
+@import '@assets/styles/style.scss';
+
+.baseLayoutContainer {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.baseBodyContainer {
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  min-height: 100vh;
+
+  overflow: hidden;
+  padding-top: $height-header;
+  transition: all 0.1s ease;
+
+  &.disablePaddingHeader {
+    padding-top: 0;
+  }
+}
+
+.baseContentContainer {
+  transition: all 0.1s ease;
+  flex: 1;
+  overflow: hidden;
+  overflow-y: visible;
+  max-width: calc(100vw - 26rem);
+  max-height: 100vh;
+
+  @include scrollbar-vertical-auto;
+
+  &.fullScreen {
+    max-width: 100vw;
+  }
+}
+
+.contentContainer {
+  padding: $spacing-8 $spacing-16 $spacing-8 $spacing-8;
+
+  .contentInner {
+    width: 100%;
+  }
+}

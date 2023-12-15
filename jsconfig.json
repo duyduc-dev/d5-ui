@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    // "types": ["node", "react", "react-dom"],
+    // "lib": ["dom", "dom.iterable", "esnext"],
+    // "skipLibCheck": true,
+    // "strict": true,
+    // "noImplicitAny": false,
+    // "forceConsistentCasingInFileNames": true,
+    // "noEmit": false,
+    // "esModuleInterop": true,
+    // "moduleResolution": "node",
+    // "resolveJsonModule": true,
+    // "isolatedModules": true,
+    // "jsx": "preserve",
+    // "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@i18n": ["./src/i18n/index.js"],
+      "@libs/*": ["./src/libs/*"],
+      "@pages/*": ["src/modules/*"],
+      "@constants": ["src/constants/index.js"],
+      "@constants/enum": ["./src/constants/enum/index.js"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@routes": ["./src/routes/index.js"],
+      "@utils/*": ["./src/utils/*"],
+      "@store": ["src/store/index.js"],
+      "@/*": ["./src/*"]
+    }
+    // "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["src/**/*"]
+}

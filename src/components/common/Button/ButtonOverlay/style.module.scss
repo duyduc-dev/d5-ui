@@ -1,0 +1,13 @@
+.fullWidth {
+  width: 100%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.overlayHover {
+  &:hover {
+    background-color: var(--neutrals-grey-9) !important;
+  }
+}
